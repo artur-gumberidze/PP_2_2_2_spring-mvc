@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th>Speed</th>
+        <th>Model</th>
+        <th>Volume</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="transport :${transport}">
+        <td th:text="${transport.speed}"/>
+        <td th:text="${transport.model}"/>
+        <td th:text="${transport.volume}"/>
+
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
