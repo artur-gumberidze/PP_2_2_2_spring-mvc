@@ -24,7 +24,10 @@ public class CarDaoImpl implements CarDao{
 
 
     @Override
-    public List<Car> getCar(int count) {
+    public List<Car> getCar(Integer count) {
+        if(count == null){
+            count = 0;
+        }
         ArrayList<Car> car = new ArrayList<>();
         for (int i = 0; i < count; i++) {
             car.add(cars.get(i));
